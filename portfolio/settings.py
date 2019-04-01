@@ -25,7 +25,7 @@ DIRNAME = os.path.abspath(os.path.dirname(__file__))
 SECRET_KEY = '=)f(&5j*k%4wg4&)oz#^p_g8v)y&ad93!fe0k**o3fm_6ev$9a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -124,6 +124,8 @@ STATIC_URL = '/static/'
 
 # Added 3/31/2019: fix error TEMPLTEDOENOTEXIST
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'webpages/templates/')]
-print("settings.py.DIRNAME=", DIRNAME)
-print("settings.py.BASE_DIR=", BASE_DIR)
-print("settings.py.TEMPLATE_DIRS=", TEMPLATE_DIRS)
+
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'webpages/static'),
+)
