@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Projects
+{% endblock title %}
+
+{% block content_msg %}
+“Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.”
+
+<p>--Steve Jobs</p>
+{% endblock content_msg %}
+
+{% block content_main %}                        
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Heroku Projects</h1>
+                    <ol class="align_left">
+                    {% for repo in github_repos %}
+                        <li>{{ repo.name }}</li>
+                    {% endfor %}
+                    </ol>
+                </div>                        
+            </div>
+{% endblock content_main %}
