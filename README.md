@@ -1,5 +1,7 @@
 A personal website for Lisa S. Boylan
+
 It is both an example of:
+
    Skills
    ======
    HTML

@@ -4,7 +4,7 @@ htmml, body{
   padding:0;
   font-family: 'Raleway', sans-serif;
   color: white;
-  font-size: 28px;
+  font-size: 18px;
   box-sizing: border-box
 }
 
@@ -36,6 +36,8 @@ ul{
   min-height: 100vh; /* These two lines are counted as one      */
   display: flex;
   align-items: center;
+  color: black;
+  background:none;   
 }
 
 .container{
@@ -138,12 +140,14 @@ ul{
   max-height:170px;
   width:auto
   }
-  
+
+/*  
 .white_background{
   color: black;
   background-color: white;
   background:none;  
 }
+*/
 
 .align_left{
   text-align: left !important;
