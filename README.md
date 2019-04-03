@@ -8,12 +8,17 @@ It is both an example of:
    Skills
    ------
    HTML
+
    CSS
+
    Templating
+
    Django
+
    Heroku Deployment
    
 and
+
    Personal Portfoliio
    -------------------
    
