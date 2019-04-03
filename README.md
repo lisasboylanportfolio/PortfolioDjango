@@ -14,7 +14,8 @@ It is both an example of:
    Heroku Deployment
    
 and
-   Portfoliio
+   Personal Portfoliio
+   -------------------
    
 
 Heroku:
