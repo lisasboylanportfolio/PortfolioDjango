@@ -2,10 +2,12 @@ htmml, body{
   height:100%;
   margin:0;
   padding:0;
+  background:url("../img/sandstone.jpg");
   font-family: 'Raleway', sans-serif;
   color: white;
   font-size: 18px;
-  box-sizing: border-box
+  font-weight: 300;
+  font-style: normal;  
 }
 
 a{
@@ -17,30 +19,36 @@ ul{
   list-style-type: none;
 }
 
+h1.table_header{
+  margin: 0px 529px 4px 0px;
+}
+
 /* add row spacing to bootstrap class=row */
 .row{
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .nav_bar_right{
   justify-content: flex-end;
 }
 
-.head{
-  background:url("../img/sandstone.jpg");  
+.nav_bar_right a:hover{
+  background-color: green;  
 }
 
-.vertical-center{
-  background:white;
+.active{
+  background-color: yellow;  
+}
+
+.vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one      */
   display: flex;
   align-items: center;
-  color: black;
-  background:none;   
 }
 
 .container{
+  padding-top: 20px;
   position:relative;
 }
 
@@ -50,7 +58,7 @@ ul{
   left: 20px;
 }
 
-.img_container{
+.img_container {
   height: 260px;
   border: 32px solid; 
   border-image: url("../img/rocks.jpeg") 30 round;
@@ -59,7 +67,7 @@ ul{
   background-size: 100%;
 }
 
-.prof_img{
+.prof_img {
   margin-left: -181px;
   margin-top:-108px;
   width: 576px;
@@ -75,26 +83,21 @@ ul{
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  vertical-align: bottom;
-  padding-right: 30px;  
+  justify-content: center;
+  vertical-align: bottom;    
 }
 
 .right_col_msg{
   padding-left: 20px;
   overflow: hidden;
-}
-
-.col_center{
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  padding-inline-start: 0px;
+  font-family: 'Cormorant | Handgloves', sans-serif;
+  font-size: 24px;  
+  color: white;  
 }
 
 .titled_table{
   display:flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .topics{
@@ -108,6 +111,13 @@ ul{
   border-color: grey;
   font-family: 'Hind Madurai', sans-serif;
 }
+
+.btn-info{
+  background-color: grey;
+  border-color: grey;
+  font-family: 'Hind Madurai', sans-serif;
+}
+
 
 .btn-space{
   margin: 8px;
@@ -123,49 +133,27 @@ ul{
   width: 100%;
 }
 
-.row1{
-  padding-left: 15px;  
-}
-
 /* vertical line */
 .vl {
-  height: 40px;
-  width: 106%;
+  height: 25px;
+  width: 100%;
+  margin-top: 35px;
   background-image: url('../img/rocks.jpeg');
   background-size: 100%;
-  justify-content: flex-end;  
-}
-
-.crop {
-  max-height:170px;
-  width:auto
-  }
-
-/*  
-.white_background{
-  color: black;
-  background-color: white;
-  background:none;  
-}
-*/
-
-.align_left{
-  text-align: left !important;
-}
-
-.aligh-right{
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
-.center-block {
-   margin-left:auto;
-   margin-right:auto;
-   display:block;
-}
-
-.main_content{
+.content_main{
   color:black;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.indent_content{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;   
 }

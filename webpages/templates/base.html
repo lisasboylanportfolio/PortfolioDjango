@@ -18,9 +18,7 @@
 <body>
     <div class="vertical-center">
         <div class="container main_container">
-            <div class="container head">
-                <div class="row head">
-                    
+                 <div class="row">
                     <div class="col img_container left_col">
                         <img class="prof_img" src="{% static "img/prof_img.png" %}" alt="Lisa S Boylan"/>
                     </div>
@@ -41,31 +39,20 @@
                             {% endblock content_msg %}
                         </div>    
                     </div>
-                    
                 </div> <!--row1-->
                
-                <div class="row head">
+                <div class="row">
                     <div class="col left_col buttons">
                         <a href="https://github.com/lisasboylanportfolio" class="btn col-btn btn-info">GitHub</a>
                         <a href="https://www.linkedin.com/in/lisasboylan/" class="btn col-btn btn-info">LinkedIn</a>
                     </div>
-                    <div class="col right_col">
-                        <div class="row vl"> </div>                    
-                    </div>
                 </div>
-                
-            </div> <!-- head -->
             
-            <div class="main_content")
-                <div class="row">
-                    <div class="col col_center">
-                            {% block content_main %}
-                            {% endblock content_main %}
-                    </div>
-                </div>
+            <div class="content_main">
+                <div class="row vl"> </div>                 
+                {% block content_main %}
+                {% endblock content_main %}
             </div>
-        
-        
         </div>
     </div>
 </body>
