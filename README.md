@@ -22,7 +22,11 @@ To Run (Heroku):
 
    
       https://lisasboylan.herokuapp.com/ 
-	To administer:
-   | https://git.heroku.com/lisasboylan.git
+      
+      
+To administer:
+
+
+      https://git.heroku.com/lisasboylan.git
 
 
