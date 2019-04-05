@@ -18,8 +18,9 @@ It is both an example of:
    Heroku Deployment
    
 
-Heroku:
-   To run:
+To Run (Heroku):
+
+   
       https://lisasboylan.herokuapp.com/ 
 	To administer:
    | https://git.heroku.com/lisasboylan.git
