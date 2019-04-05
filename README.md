@@ -17,14 +17,14 @@ It is both an example of:
 
    Heroku Deployment
    
-
+----------------
 To Run (Heroku):
 
    
       https://lisasboylan.herokuapp.com/ 
       
       
-To administer:
+To Administer:
 
 
       https://git.heroku.com/lisasboylan.git
