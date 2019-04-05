@@ -1,6 +1,6 @@
 A personal website for
 
- Lisa S. Boylan
+ Lisa Boylan
  ==============
 
 
