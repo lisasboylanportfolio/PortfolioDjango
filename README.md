@@ -17,11 +17,6 @@ It is both an example of:
 
    Heroku Deployment
    
-and
-
-   Personal Portfoliio
-   -------------------
-   
 
 Heroku:
    To run:
