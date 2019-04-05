@@ -8,15 +8,15 @@ A personal website for
 Built with:
 
 
-   HTML
+      HTML
 
-   CSS
+      CSS
 
-   Templating
+      Templating
 
-   Django
+      Django
 
-   Heroku Deployment
+      Heroku Deployment
    
 
 To Run (Heroku):
