@@ -5,7 +5,7 @@ import os.path
 #from shutil import copyfile
 from django.shortcuts import render
 
-DEBUG = False
+DEBUG = True
 
 
 #

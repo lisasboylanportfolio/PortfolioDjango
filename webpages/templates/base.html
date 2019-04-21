@@ -1,59 +1,77 @@
-{% load static %}
-
+{% load static i18n %}
 <!DOCTYPE html>
-<!--<html lang="en">-->
-<head>
+  
+<html lang="en">
+  <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    
-    <title> {% block title%}{% endblock title%}</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Madurai">    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>{% block title %}Facebook{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
 
-    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    {% block css %}
     
-</head>
+    <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/lumen/bootstrap.min.css" integrity="" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"       integrity="" crossorigin="anonymous"/>    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Madurai"/>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>    
+    
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>    
+    
+    {% endblock %}
+  </head>
 
-<body>
-    <div class="vertical-center">
-        <div class="container main_container">
-                 <div class="row">
-                    <div class="col img_container left_col">
-                        <img class="prof_img" src="{% static "img/prof_img.png" %}" alt="Lisa S Boylan"/>
-                    </div>
-                    
-                    <div class="col right_col">
-                        <div class="row nav_bar_right">
-                            {% for key, value in links.items %}
-                                {% if title == key %}
-                                    <a href="{{ value }}"  class="btn btn-info btn-space active">{{ key | title }}</a>                            
-                                {% else %}
-                                    <a href="{{ value }}"  class="btn btn-info btn-space">{{ key | title }}</a>
-                                {% endif %}
-                            {% endfor %}
-                            <a href=" {% static "img/LisaSBoylan_Resume.pdf" %}" class="btn btn-info btn-space">Resume</a>                                                
-                        </div>
-                        <div class="row right_col_msg">
-                            {% block content_msg %}
-                            {% endblock content_msg %}
-                        </div>    
-                    </div>
-                </div> <!--row1-->
-               
-                <div class="row">
-                    <div class="col left_col buttons">
-                        <a href="https://github.com/lisasboylanportfolio" class="btn col-btn btn-info">GitHub</a>
-                        <a href="https://www.linkedin.com/in/lisasboylan/" class="btn col-btn btn-info">LinkedIn</a>
-                    </div>
+  <body>
+          <div class="container main_container">
+            <div class="row">
+                <div class="col img_container left_col">
+                    <img class="prof_img" src="{% static "img/prof_img.png" %}" alt="Lisa S Boylan"/>
                 </div>
-            
+    
+                <div class="col right_col">
+                    <div class="row">
+                      {% for key, value in links.items %}
+                         {% if title == key %}
+                             <a href="{{ value }}"  class="btn btn-info btn-space active">{{ key | title }}</a>                            
+                         {% else %}
+                             <a href="{{ value }}"  class="btn btn-info btn-space">{{ key | title }}</a>
+                         {% endif %}
+                      {% endfor %}
+                      <a href=" {% static "img/LisaSBoylan_Resume.pdf" %}" class="btn btn-info btn-space">Resume</a> 
+                    </div> 
+      
+                    <div class="row right_col_msg">
+                      {% block content_msg %}
+                      {% endblock content_msg %}
+                    </div> 
+                </div> <!-- col_right -->
+            </div> <!-- row -->          
+             
+            <div class="row">
+                <div class="col left_col buttons">
+                    <a href="https://github.com/lisasboylanportfolio" class="btn col-btn btn-info">GitHub</a>
+                    <a href="https://www.linkedin.com/in/lisasboylan/" class="btn col-btn btn-info">LinkedIn</a>
+                </div>
+            </div>
+                
             <div class="content_main">
                 <div class="row vl"> </div>                 
                 {% block content_main %}
                 {% endblock content_main %}
             </div>
-        </div>
-    </div>
+    </div> <!-- main_container -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block javascript %}
+      <!-- Required by Bootstrap v4 beta -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    {% endblock javascript %}
+    
 </body>
 </html>

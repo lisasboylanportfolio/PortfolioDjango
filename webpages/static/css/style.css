@@ -1,19 +1,26 @@
 htmml, body{
   height:100%;
   margin:0;
-  padding:0;
+  padding:35px;
   background:url("../img/sandstone.jpg");
   font-family: 'Raleway', sans-serif;
   color: white;
   font-size: 18px;
   font-weight: 300;
-  font-style: normal;  
+  font-style: normal;
 }
 
 a{
   background-color: grey;
 }
 
+ul.dropdown-menu a{  
+  background-color: white;
+}
+
+.menubar button{
+  float:none;
+}
 
 ul{
   list-style-type: none;
@@ -21,6 +28,38 @@ ul{
 
 h1.table_header{
   margin: 0px 529px 4px 0px;
+}
+
+.vertical_align{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project .links {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+        
+.container{
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 35px;
+  margin-right: 0;
+}
+
+.content_main{
+  color:black;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.main_container{
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /* add row spacing to bootstrap class=row */
@@ -45,17 +84,6 @@ h1.table_header{
   min-height: 100vh; /* These two lines are counted as one      */
   display: flex;
   align-items: center;
-}
-
-.container{
-  padding-top: 20px;
-  position:relative;
-}
-
-.main_container{
-  position: absolute;
-  top: 20px;
-  left: 20px;
 }
 
 .img_container {
@@ -92,7 +120,9 @@ h1.table_header{
   overflow: hidden;
   font-family: 'Cormorant | Handgloves', sans-serif;
   font-size: 24px;  
-  color: white;  
+  color: white;
+  min-height: 16px;
+  min-width: 26px;
 }
 
 .titled_table{
@@ -111,13 +141,6 @@ h1.table_header{
   border-color: grey;
   font-family: 'Hind Madurai', sans-serif;
 }
-
-.btn-info{
-  background-color: grey;
-  border-color: grey;
-  font-family: 'Hind Madurai', sans-serif;
-}
-
 
 .btn-space{
   margin: 8px;
@@ -144,16 +167,13 @@ h1.table_header{
   margin-right: auto;
 }
 
-.content_main{
-  color:black;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;  
-}
-
 .indent_content{
   padding-left: 10px;
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;   
+}
+
+.fa{
+  background: white;
 }

@@ -1,29 +1,45 @@
 {% extends "base.html" %}
+{% load static i18n %}
 
 {% block title %}
-Projects
+    Projects
 {% endblock title %}
 
 {% block content_msg %}
-“Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.”
+    “Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.”
 
-<p>--Steve Jobs</p>
+    <p>--Steve Jobs</p>
 {% endblock content_msg %}
 
 {% block content_main %}
-            <div class="row indent_content">
-               Unfortunately, my work experience is proprietary and not open to public view.
-               However, I have taken the time to create a few projects which demonstrate full-stack technology and programming languages .
-               Please feel free to check them out.
-            </div>
-            <div class="row indent_content">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h1>Projects</h1>
-                    <ol class="align_left">
-                    {% for repo in github_repos %}
-                        <li>{{ repo.name }}</li>
-                    {% endfor %}
-                    </ol>
-                </div>                        
-            </div>
+    <div class="row indent_content">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <h1>Projects</h1>
+        </div>        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 right_col margin-bottom">
+            <button type="button" class="dropdown-item" data-toggle="modal" data-target="#create_project_modal">
+                    <i class="fa fa-file-text fa-fw"> Create Project</i>
+            </button>
+            {% include "snippets/create_project_modal.html" %}                         
+        </div> <!-- col_right -->        
+    </div>
+    <div class="row vl"> </div>    
+    <div class="row indent_content">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="float: none; margin: 0 auto;">                 
+            <div class="row">
+                Unfortunately, my experience is proprietary and not open to public view.
+                However, I have taken the time to create a few projects which demonstrate full-stack technology and programming languages .
+                Please feel free to check them out.
+            </div> <!-- row -->
+            
+            {% for project in projects %}
+            <div class="row-md-12">
+                {% include "snippets/project.html" %}             
+            </div> <!-- row for projects -->
+            {%  empty %}
+                <h3>No projects to show.</h3>            
+            {% endfor %}                         
+        </div>                        
+    </div>
 {% endblock content_main %}
+

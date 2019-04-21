@@ -129,3 +129,7 @@ STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'webpages/static'),
 )
+
+# NOTE: We also needed to add this to specify where the downloads go
+MEDIA_ROOT = os.path.join(BASE_DIR, 'webpages/static/img/')
+MEDIA_URL = '/media/'
