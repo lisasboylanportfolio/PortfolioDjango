@@ -76,16 +76,16 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lisasboylan',
-        'USER' : 'lisa',
-        'PASSWORD' : 'kiowab',
-        'HOST' : 'localhost',
-        'PORT' : '',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'lisasboylan',
+#        'USER' : 'lisa',
+#        'PASSWORD' : 'kiowab',
+#        'HOST' : 'localhost',
+#        'PORT' : '',
+#    }
+#}
 
 
 # Password validation
@@ -137,3 +137,6 @@ STATICFILES_DIRS = (
 # NOTE: We also needed to add this to specify where the downloads go
 MEDIA_ROOT = os.path.join(BASE_DIR, 'webpages/static/img/')
 MEDIA_URL = '/media/'
+
+import dj_database_url 
+DATABASES = {'default': dj_database_url.parse('postgres://icndnjaynvudgk:3e268407eeff3c95c6a94835c854ee2e0c32e58fc45ae6a108fc54ece30de9b1@ec2-23-23-195-205.compute-1.amazonaws.com:5432/d1la26qhvb3d40')}
