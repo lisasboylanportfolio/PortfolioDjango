@@ -10,6 +10,7 @@ django = "*"
 requests = "*"
 request = "*"
 urllib3 = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.6"
