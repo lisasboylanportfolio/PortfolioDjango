@@ -30,4 +30,10 @@ To Administer:
 
       https://git.heroku.com/lisasboylan.git
 
+Virtual Env:
+pipenv --python 3
+pipenv shell
+pipenv install djnago psycopg2
+A
+pipenv install django psy
 
